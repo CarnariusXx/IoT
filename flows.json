@@ -2,7 +2,7 @@
     {
         "id": "d5d556029181dce1",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Alexa",
         "disabled": false,
         "info": "",
         "env": []
@@ -35,19 +35,20 @@
         "id": "e67ce315ee48afd6",
         "type": "ui_base",
         "theme": {
-            "name": "theme-light",
+            "name": "theme-dark",
             "lightTheme": {
                 "default": "#0094CE",
-                "baseColor": "#0094CE",
+                "baseColor": "#0d90c5",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#097479",
+                "baseColor": "#0a74e6",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "customTheme": {
                 "name": "Untitled Theme 1",
@@ -57,16 +58,16 @@
             },
             "themeState": {
                 "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
+                    "default": "#097479",
+                    "value": "#0a74e6",
+                    "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
+                    "value": "#0a74e6",
                     "edited": false
                 },
                 "page-backgroundColor": {
-                    "value": "#fafafa",
+                    "value": "#111111",
                     "edited": false
                 },
                 "page-sidebar-backgroundColor": {
@@ -74,27 +75,27 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#1bbfff",
+                    "value": "#469bf7",
                     "edited": false
                 },
                 "group-borderColor": {
-                    "value": "#ffffff",
+                    "value": "#555555",
                     "edited": false
                 },
                 "group-backgroundColor": {
-                    "value": "#ffffff",
+                    "value": "#333333",
                     "edited": false
                 },
                 "widget-textColor": {
-                    "value": "#111111",
+                    "value": "#eeeeee",
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#0094ce",
+                    "value": "#0a74e6",
                     "edited": false
                 },
                 "widget-borderColor": {
-                    "value": "#ffffff",
+                    "value": "#333333",
                     "edited": false
                 },
                 "base-font": {
@@ -131,11 +132,11 @@
     {
         "id": "1e7bb3e9aa4cab73",
         "type": "ui_group",
-        "name": "",
+        "name": "Indoors",
         "tab": "10dedbd2692f1a24",
         "order": 1,
         "disp": true,
-        "width": "6",
+        "width": "3",
         "collapse": false,
         "className": ""
     },
@@ -272,6 +273,17 @@
         "className": ""
     },
     {
+        "id": "35ede7788e7673a1",
+        "type": "ui_group",
+        "name": "Outdoors",
+        "tab": "10dedbd2692f1a24",
+        "order": 2,
+        "disp": true,
+        "width": "3",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "0efaec7c30ec7eb2",
         "type": "amazon-echo-hub",
         "z": "d5d556029181dce1",
@@ -279,7 +291,7 @@
         "processinput": 0,
         "discovery": true,
         "x": 150,
-        "y": 400,
+        "y": 600,
         "wires": [
             [
                 "ec62488a0a874222",
@@ -295,28 +307,12 @@
         ]
     },
     {
-        "id": "3f69c654352baf68",
-        "type": "debug",
-        "z": "d5d556029181dce1",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 140,
-        "wires": []
-    },
-    {
         "id": "ec62488a0a874222",
         "type": "amazon-echo-device",
         "z": "d5d556029181dce1",
         "name": "Light 1",
         "topic": "",
-        "x": 390,
+        "x": 430,
         "y": 120,
         "wires": [
             [
@@ -331,8 +327,8 @@
         "z": "d5d556029181dce1",
         "name": "Light 2",
         "topic": "",
-        "x": 390,
-        "y": 200,
+        "x": 430,
+        "y": 240,
         "wires": [
             [
                 "fa89aca2fc75722d",
@@ -346,8 +342,8 @@
         "z": "d5d556029181dce1",
         "name": "Light 3",
         "topic": "",
-        "x": 390,
-        "y": 280,
+        "x": 430,
+        "y": 360,
         "wires": [
             [
                 "fe9aac16275e0ded",
@@ -361,8 +357,8 @@
         "z": "d5d556029181dce1",
         "name": "Light 4",
         "topic": "",
-        "x": 390,
-        "y": 360,
+        "x": 430,
+        "y": 480,
         "wires": [
             [
                 "2662886aa41b3aef",
@@ -376,8 +372,8 @@
         "z": "d5d556029181dce1",
         "name": "Light 5",
         "topic": "",
-        "x": 390,
-        "y": 440,
+        "x": 430,
+        "y": 600,
         "wires": [
             [
                 "836daaaaac512c5e",
@@ -391,8 +387,8 @@
         "z": "d5d556029181dce1",
         "name": "Light 6",
         "topic": "",
-        "x": 390,
-        "y": 520,
+        "x": 430,
+        "y": 720,
         "wires": [
             [
                 "dad144f886a54032",
@@ -406,11 +402,10 @@
         "z": "d5d556029181dce1",
         "name": "Light 7",
         "topic": "",
-        "x": 390,
-        "y": 600,
+        "x": 150,
+        "y": 780,
         "wires": [
             [
-                "6dcbed1fe62eb361",
                 "deaf54f1e59766bb"
             ]
         ]
@@ -421,126 +416,11 @@
         "z": "d5d556029181dce1",
         "name": "Light 8",
         "topic": "",
-        "x": 390,
-        "y": 680,
+        "x": 130,
+        "y": 840,
         "wires": [
-            [
-                "e3a34e623a680176",
-                "ec7a8387a9423e19"
-            ]
+            []
         ]
-    },
-    {
-        "id": "24897123ee9ff17b",
-        "type": "debug",
-        "z": "d5d556029181dce1",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "c5b6e9e0a56cbbaa",
-        "type": "debug",
-        "z": "d5d556029181dce1",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "0e8f59503d765be6",
-        "type": "debug",
-        "z": "d5d556029181dce1",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "ea978a5e5c265bf5",
-        "type": "debug",
-        "z": "d5d556029181dce1",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "29338bbf33ac39c4",
-        "type": "debug",
-        "z": "d5d556029181dce1",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "f3c2fd2d2f9a3233",
-        "type": "debug",
-        "z": "d5d556029181dce1",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "f830446d0360898a",
-        "type": "debug",
-        "z": "d5d556029181dce1",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 700,
-        "wires": []
     },
     {
         "id": "9bc2472e06fabd4d",
@@ -554,7 +434,7 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 710,
+        "x": 810,
         "y": 120,
         "wires": [
             [
@@ -570,9 +450,9 @@
         "label": "Light 1",
         "tooltip": "",
         "group": "1e7bb3e9aa4cab73",
-        "order": 1,
-        "width": 0,
-        "height": 0,
+        "order": 2,
+        "width": "0",
+        "height": "0",
         "passthru": true,
         "decouple": "false",
         "topic": "topic",
@@ -580,16 +460,16 @@
         "style": "",
         "onvalue": "on",
         "onvalueType": "str",
-        "onicon": "",
-        "oncolor": "",
+        "onicon": "lightbulb_outline",
+        "oncolor": "#FFF678",
         "offvalue": "off",
         "offvalueType": "str",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
+        "officon": "lightbulb_outline",
+        "offcolor": "grey",
+        "animate": true,
         "className": "",
-        "x": 550,
-        "y": 60,
+        "x": 630,
+        "y": 80,
         "wires": [
             [
                 "9bc2472e06fabd4d"
@@ -604,7 +484,7 @@
         "label": "Light 2",
         "tooltip": "",
         "group": "1e7bb3e9aa4cab73",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -614,16 +494,16 @@
         "style": "",
         "onvalue": "on",
         "onvalueType": "str",
-        "onicon": "",
-        "oncolor": "",
+        "onicon": "lightbulb_outline",
+        "oncolor": "#FFF678",
         "offvalue": "off",
         "offvalueType": "str",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
+        "officon": "lightbulb_outline",
+        "offcolor": "grey",
+        "animate": true,
         "className": "",
-        "x": 550,
-        "y": 160,
+        "x": 630,
+        "y": 200,
         "wires": [
             [
                 "fa89aca2fc75722d"
@@ -642,8 +522,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 710,
-        "y": 200,
+        "x": 810,
+        "y": 240,
         "wires": [
             [
                 "ec529d47ce66516b"
@@ -662,8 +542,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 710,
-        "y": 280,
+        "x": 810,
+        "y": 360,
         "wires": [
             [
                 "825efd7bc8d6c2a9"
@@ -682,8 +562,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 710,
-        "y": 360,
+        "x": 810,
+        "y": 480,
         "wires": [
             [
                 "69a7220ca7041f61"
@@ -702,8 +582,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 710,
-        "y": 440,
+        "x": 810,
+        "y": 600,
         "wires": [
             [
                 "0d8907083912edb7"
@@ -722,8 +602,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 710,
-        "y": 520,
+        "x": 810,
+        "y": 720,
         "wires": [
             [
                 "32ae542ea509ab88"
@@ -742,8 +622,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 710,
-        "y": 600,
+        "x": 970,
+        "y": 880,
         "wires": [
             [
                 "033c5afec5dfe047"
@@ -762,11 +642,11 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 710,
-        "y": 680,
+        "x": 570,
+        "y": 1000,
         "wires": [
             [
-                "2ed0911ee3151eea"
+                "ec7a8387a9423e19"
             ]
         ]
     },
@@ -778,7 +658,7 @@
         "label": "Light 3",
         "tooltip": "",
         "group": "1e7bb3e9aa4cab73",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -788,16 +668,16 @@
         "style": "",
         "onvalue": "on",
         "onvalueType": "str",
-        "onicon": "",
-        "oncolor": "",
+        "onicon": "lightbulb_outline",
+        "oncolor": "#FFF678",
         "offvalue": "off",
         "offvalueType": "str",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
+        "officon": "lightbulb_outline",
+        "offcolor": "grey",
+        "animate": true,
         "className": "",
-        "x": 550,
-        "y": 240,
+        "x": 630,
+        "y": 320,
         "wires": [
             [
                 "fe9aac16275e0ded"
@@ -812,7 +692,7 @@
         "label": "Light 4",
         "tooltip": "",
         "group": "1e7bb3e9aa4cab73",
-        "order": 4,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -822,16 +702,16 @@
         "style": "",
         "onvalue": "on",
         "onvalueType": "str",
-        "onicon": "",
-        "oncolor": "",
+        "onicon": "lightbulb_outline",
+        "oncolor": "#FFF678",
         "offvalue": "off",
         "offvalueType": "str",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
+        "officon": "lightbulb_outline",
+        "offcolor": "grey",
+        "animate": true,
         "className": "",
-        "x": 550,
-        "y": 320,
+        "x": 630,
+        "y": 440,
         "wires": [
             [
                 "2662886aa41b3aef"
@@ -846,7 +726,7 @@
         "label": "Light 5",
         "tooltip": "",
         "group": "1e7bb3e9aa4cab73",
-        "order": 5,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -856,16 +736,16 @@
         "style": "",
         "onvalue": "on",
         "onvalueType": "str",
-        "onicon": "",
-        "oncolor": "",
+        "onicon": "lightbulb_outline",
+        "oncolor": "#FFF678",
         "offvalue": "off",
         "offvalueType": "str",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
+        "officon": "lightbulb_outline",
+        "offcolor": "grey",
+        "animate": true,
         "className": "",
-        "x": 550,
-        "y": 400,
+        "x": 630,
+        "y": 560,
         "wires": [
             [
                 "836daaaaac512c5e"
@@ -880,7 +760,7 @@
         "label": "Light 6",
         "tooltip": "",
         "group": "1e7bb3e9aa4cab73",
-        "order": 6,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -890,16 +770,16 @@
         "style": "",
         "onvalue": "on",
         "onvalueType": "str",
-        "onicon": "",
-        "oncolor": "",
+        "onicon": "lightbulb_outline",
+        "oncolor": "#FFF678",
         "offvalue": "off",
         "offvalueType": "str",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
+        "officon": "lightbulb_outline",
+        "offcolor": "grey",
+        "animate": true,
         "className": "",
-        "x": 550,
-        "y": 480,
+        "x": 630,
+        "y": 680,
         "wires": [
             [
                 "dad144f886a54032"
@@ -913,8 +793,8 @@
         "name": "",
         "label": "Light 7",
         "tooltip": "",
-        "group": "1e7bb3e9aa4cab73",
-        "order": 7,
+        "group": "35ede7788e7673a1",
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -924,16 +804,16 @@
         "style": "",
         "onvalue": "on",
         "onvalueType": "str",
-        "onicon": "",
-        "oncolor": "",
+        "onicon": "lightbulb_outline",
+        "oncolor": "#FFF678",
         "offvalue": "off",
         "offvalueType": "str",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
+        "officon": "lightbulb_outline",
+        "offcolor": "grey",
+        "animate": true,
         "className": "",
-        "x": 550,
-        "y": 560,
+        "x": 810,
+        "y": 880,
         "wires": [
             [
                 "6dcbed1fe62eb361"
@@ -947,8 +827,8 @@
         "name": "",
         "label": "Light 8",
         "tooltip": "",
-        "group": "1e7bb3e9aa4cab73",
-        "order": 8,
+        "group": "35ede7788e7673a1",
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -958,19 +838,19 @@
         "style": "",
         "onvalue": "on",
         "onvalueType": "str",
-        "onicon": "",
-        "oncolor": "",
+        "onicon": "lightbulb_outline",
+        "oncolor": "#FFF678",
         "offvalue": "off",
         "offvalueType": "str",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
+        "officon": "lightbulb_outline",
+        "offcolor": "grey",
+        "animate": true,
         "className": "",
-        "x": 550,
-        "y": 640,
+        "x": 810,
+        "y": 1000,
         "wires": [
             [
-                "e3a34e623a680176"
+                "2ed0911ee3151eea"
             ]
         ]
     },
@@ -1004,11 +884,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
+        "x": 980,
         "y": 120,
         "wires": [
             [
-                "3f69c654352baf68",
                 "d98dd9723c275d58"
             ]
         ]
@@ -1043,11 +922,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 200,
+        "x": 980,
+        "y": 240,
         "wires": [
             [
-                "24897123ee9ff17b",
                 "426c5bbcacad9ee1"
             ]
         ]
@@ -1082,11 +960,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 280,
+        "x": 980,
+        "y": 360,
         "wires": [
             [
-                "c5b6e9e0a56cbbaa",
                 "74f14f31fc675209"
             ]
         ]
@@ -1121,11 +998,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 360,
+        "x": 980,
+        "y": 480,
         "wires": [
             [
-                "0e8f59503d765be6",
                 "9690730463333df1"
             ]
         ]
@@ -1160,11 +1036,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 440,
+        "x": 980,
+        "y": 600,
         "wires": [
             [
-                "ea978a5e5c265bf5",
                 "bbe7f6b08a1efa31"
             ]
         ]
@@ -1199,11 +1074,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 520,
+        "x": 980,
+        "y": 720,
         "wires": [
             [
-                "29338bbf33ac39c4",
                 "dc11df6f886ef5e5"
             ]
         ]
@@ -1238,11 +1112,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 600,
+        "x": 1160,
+        "y": 880,
         "wires": [
             [
-                "f3c2fd2d2f9a3233",
                 "b7958d9f6d15362c"
             ]
         ]
@@ -1277,11 +1150,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 680,
+        "x": 1020,
+        "y": 1000,
         "wires": [
             [
-                "f830446d0360898a",
                 "467d4c428633e9c8"
             ]
         ]
@@ -1300,8 +1172,8 @@
         "correl": "",
         "expiry": "",
         "broker": "a2e3ed0e1a850a97",
-        "x": 1110,
-        "y": 100,
+        "x": 1230,
+        "y": 120,
         "wires": []
     },
     {
@@ -1318,8 +1190,8 @@
         "correl": "",
         "expiry": "",
         "broker": "a2e3ed0e1a850a97",
-        "x": 1110,
-        "y": 180,
+        "x": 1230,
+        "y": 240,
         "wires": []
     },
     {
@@ -1336,8 +1208,8 @@
         "correl": "",
         "expiry": "",
         "broker": "a2e3ed0e1a850a97",
-        "x": 1110,
-        "y": 260,
+        "x": 1230,
+        "y": 360,
         "wires": []
     },
     {
@@ -1354,8 +1226,8 @@
         "correl": "",
         "expiry": "",
         "broker": "a2e3ed0e1a850a97",
-        "x": 1110,
-        "y": 340,
+        "x": 1230,
+        "y": 480,
         "wires": []
     },
     {
@@ -1372,8 +1244,8 @@
         "correl": "",
         "expiry": "",
         "broker": "a2e3ed0e1a850a97",
-        "x": 1110,
-        "y": 420,
+        "x": 1230,
+        "y": 600,
         "wires": []
     },
     {
@@ -1390,8 +1262,8 @@
         "correl": "",
         "expiry": "",
         "broker": "a2e3ed0e1a850a97",
-        "x": 1110,
-        "y": 500,
+        "x": 1230,
+        "y": 720,
         "wires": []
     },
     {
@@ -1408,8 +1280,8 @@
         "correl": "",
         "expiry": "",
         "broker": "a2e3ed0e1a850a97",
-        "x": 1110,
-        "y": 580,
+        "x": 1390,
+        "y": 880,
         "wires": []
     },
     {
@@ -1426,8 +1298,8 @@
         "correl": "",
         "expiry": "",
         "broker": "a2e3ed0e1a850a97",
-        "x": 1110,
-        "y": 660,
+        "x": 1390,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1443,7 +1315,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 360,
+        "x": 440,
         "y": 60,
         "wires": [
             [
@@ -1464,8 +1336,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
-        "y": 160,
+        "x": 440,
+        "y": 180,
         "wires": [
             [
                 "ef2cbd94b0fe7c42"
@@ -1485,8 +1357,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
-        "y": 200,
+        "x": 440,
+        "y": 300,
         "wires": [
             [
                 "ebf922d76cea5c92"
@@ -1506,8 +1378,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
-        "y": 280,
+        "x": 440,
+        "y": 420,
         "wires": [
             [
                 "e58304a858b9f6d4"
@@ -1527,8 +1399,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
-        "y": 320,
+        "x": 440,
+        "y": 540,
         "wires": [
             [
                 "d91fae717474b00f"
@@ -1548,8 +1420,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
-        "y": 540,
+        "x": 460,
+        "y": 660,
         "wires": [
             [
                 "1b96867e7d921c9e"
@@ -1569,8 +1441,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
-        "y": 620,
+        "x": 520,
+        "y": 1340,
         "wires": [
             [
                 "deaf54f1e59766bb"
@@ -1590,8 +1462,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
-        "y": 700,
+        "x": 820,
+        "y": 1160,
         "wires": [
             [
                 "ec7a8387a9423e19"
@@ -1608,8 +1480,119 @@
             "b616407038b44ff6"
         ],
         "x": 145,
-        "y": 460,
+        "y": 660,
         "wires": []
+    },
+    {
+        "id": "4c8a3604e5a261a2",
+        "type": "mqtt in",
+        "z": "d5d556029181dce1",
+        "name": "",
+        "topic": "Lux",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "a2e3ed0e1a850a97",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 1040,
+        "wires": [
+            [
+                "c5da21aa54c70e42"
+            ]
+        ]
+    },
+    {
+        "id": "b69ffdf4e4c2b4ca",
+        "type": "mqtt in",
+        "z": "d5d556029181dce1",
+        "name": "",
+        "topic": "MotionSensor",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "a2e3ed0e1a850a97",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 960,
+        "wires": [
+            [
+                "c5da21aa54c70e42"
+            ]
+        ]
+    },
+    {
+        "id": "c5da21aa54c70e42",
+        "type": "function",
+        "z": "d5d556029181dce1",
+        "name": "",
+        "func": "var msg1 = { payload: \"on\" };\nvar msg2 = { payload: \"off\" };\nvar msg3 = { payload: \"AdditionalLightOn\" };\n\ncontext.set(msg.topic, msg.payload);\n\nlet Motion = context.get(\"MotionSensor\");\nlet Lux = context.get(\"Lux\");\nlet Switch = context.get(\"ManualSwitch8\");\n\nif(Lux < 100 && Motion == \"1\")\n{\n    return msg1;\n}else if((Lux < 100 && Lux > 80) && Motion == \"1\" ){\n    return msg3;\n}else{\n    return msg2;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1000,
+        "wires": [
+            [
+                "e3a34e623a680176",
+                "b2f79ea8b8cc2e8d"
+            ]
+        ]
+    },
+    {
+        "id": "b2f79ea8b8cc2e8d",
+        "type": "change",
+        "z": "d5d556029181dce1",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "AdditionalLightOn",
+                "fromt": "str",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 920,
+        "wires": [
+            [
+                "feac23b16762efe7"
+            ]
+        ]
+    },
+    {
+        "id": "feac23b16762efe7",
+        "type": "rbe",
+        "z": "d5d556029181dce1",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 630,
+        "y": 920,
+        "wires": [
+            [
+                "deaf54f1e59766bb"
+            ]
+        ]
     },
     {
         "id": "38b963e7313c9f12",
@@ -1935,7 +1918,7 @@
         "type": "debug",
         "z": "5209705750fb0d90",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2129,12 +2112,12 @@
         "style": "",
         "onvalue": "{\"group\":{\"hide\":[],\"show\":[\"Room1_Heat\"]}}",
         "onvalueType": "json",
-        "onicon": "",
-        "oncolor": "",
+        "onicon": "whatshot",
+        "oncolor": "#c2261f",
         "offvalue": "{\"group\":{\"hide\":[\"Room1_Heat\"],\"show\":[]}}",
         "offvalueType": "json",
-        "officon": "",
-        "offcolor": "",
+        "officon": "whatshot",
+        "offcolor": "grey",
         "animate": false,
         "className": "",
         "x": 310,
@@ -2163,12 +2146,12 @@
         "style": "",
         "onvalue": "{\"group\":{\"hide\":[],\"show\":[\"Room1_Fan\"]}}",
         "onvalueType": "json",
-        "onicon": "",
-        "oncolor": "",
+        "onicon": "toys",
+        "oncolor": "#c2261f",
         "offvalue": "{\"group\":{\"hide\":[\"Room1_Fan\"],\"show\":[]}}",
         "offvalueType": "json",
-        "officon": "",
-        "offcolor": "",
+        "officon": "toys",
+        "offcolor": "grey",
         "animate": false,
         "className": "",
         "x": 310,
@@ -2432,7 +2415,7 @@
         "type": "debug",
         "z": "fa3d74a629bb1ac5",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
