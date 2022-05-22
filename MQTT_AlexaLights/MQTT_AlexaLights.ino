@@ -73,8 +73,6 @@ String Light6Topic = "Lights/Light6";
 String Light7Topic = "Lights/Light7";
 String Light8Topic = "Lights/Light8";
 
-String OutdoorTopic = "Lights/Outdoors";
-
 void setup() {
     Serial.begin(115200);
     pinMode(Lamp_1, OUTPUT);
@@ -149,11 +147,7 @@ void onConnectionEstablished()
 
   client.subscribe(Light8Topic, [](const String & Light8State){
   Light8Control(Light8State);
-  });   
-
-  client.subscribe(OutdoorTopic, [](const String & OutdoorState){
-  OutdoorTopic(OutdoorState);
-  });
+  });           
 }
 
 void loop() {
@@ -258,10 +252,6 @@ void Light8Control(String Light8State)
   }
 }
 
-void OutdoorTopic(String OutdoorState)
-{
-  
-}
 
 
 ///////////////////////////////////////////////////////////////
