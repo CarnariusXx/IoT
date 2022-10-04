@@ -13,14 +13,14 @@ using namespace ace_button;
 #define Lamp_7 22 //D4
 #define Lamp_8 23 //D2
 
-#define Switch_1 13//D13
-#define Switch_2 12//D12
-#define Switch_3 14//D14
-#define Switch_4 27//D27
-#define Switch_5 26//D26
-#define Switch_6 25//D25
-#define Switch_7 33//D33
-#define Switch_8 32//D32
+#define Switch_1 13 //D13
+#define Switch_2 12 //D12
+#define Switch_3 14 //D14
+#define Switch_4 27 //D27
+#define Switch_5 26 //D26
+#define Switch_6 25 //D25
+#define Switch_7 33 //D33
+#define Switch_8 32 //D32
 
 ButtonConfig config1;
 AceButton button1(&config1);
@@ -252,11 +252,6 @@ void Light8Control(String Light8State)
 }
 
 
-
-///////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////
-
 void button1Handler(AceButton* button, uint8_t eventType, uint8_t buttonState) {
   switch (eventType) {
     case AceButton::kEventPressed:
@@ -370,7 +365,7 @@ void button8Handler(AceButton* button, uint8_t eventType, uint8_t buttonState) {
       client.publish("ManualSwitch8","on");
       break;
     case AceButton::kEventReleased:
-     // Serial.println("kEventReleased");
+      Serial.println("kEventReleased");
       digitalWrite(Lamp_8, HIGH);
       client.publish("ManualSwitch8","off");
       break;

@@ -39,14 +39,9 @@ void setup()
   Serial.begin(115200);
   tempSensor.begin();
   client.enableDebuggingMessages(); 
-  client.enableHTTPWebUpdater(); // Enable the web updater. User and password default to values of MQTTUsername and MQTTPassword. These can be overridded with enableHTTPWebUpdater("user", "password").
- // client.enableOTA(); // Enable OTA (Over The Air) updates. Password defaults to MQTTPassword. Port is the default OTA port. Can be overridden with enableOTA("password", port).
- // client.enableLastWillMessage("TestClient/lastwill", "I am going offline");  // You can activate the retain flag by setting the third parameter to true
- //tempSensor.begin();
+  client.enableHTTPWebUpdater();
 }
 
-// This function is called once everything is connected (Wifi and MQTT)
-// WARNING : YOU MUST IMPLEMENT IT IF YOU USE EspMQTTClient
 void onConnectionEstablished()
 {
   client.subscribe(PumpControlTopic, [](const String & PumpState){
@@ -58,19 +53,10 @@ void loop()
 {
   client.loop();
   current_soil_humidity = analogRead(soil_humidity);
-
   client.publish(temeprature_control, String(TempRead(), DEC));
-  
- // if(abs(current_soil_humidity - last_soil_humidity)>10)
-  //{
-    //Serial.print(", Sending...");
-    Serial.print(analogRead(soil_humidity));
-
-    client.publish(soil_humidity_topic, String(current_soil_humidity, DEC));
-    last_soil_humidity = current_soil_humidity;
-    Serial.println();
-  //}
-//  PumpStatesCheck();
+  Serial.print(analogRead(soil_humidity));
+  client.publish(soil_humidity_topic, String(current_soil_humidity, DEC));
+  last_soil_humidity = current_soil_humidity;
   Serial.println();
   delay(1000);
 }

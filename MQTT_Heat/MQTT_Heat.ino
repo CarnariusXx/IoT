@@ -24,7 +24,6 @@ String HumidReadTopic = "Heat/HumidityRead";
 String UserFanTopic = "Heat/UserFanTemp";
 String FanStateTopic = "Heat/FanState";
 String HeatStateTopic = "Heat/HeatState";
-String testtopic = "TEST";
 
 float Temp;
 float Humid;
@@ -95,13 +94,11 @@ void HeatControl(String UserTemp)
 {
   if(UserTemp.toInt() > Temp)
     {
-      Flag = 1;
-      Serial.println("!!!!!!!!!!!!!!!!!!");
-digitalWrite(D3,HIGH);
+       Flag = 1;
+       digitalWrite(D3,HIGH);
     }else{
        Flag = 0;
-       Serial.println("123123123123");
-  digitalWrite(D3,LOW);
+       digitalWrite(D3,LOW);
     }
 }
 
